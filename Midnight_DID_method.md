@@ -242,7 +242,7 @@ This part is derived directly from [W3C DID specification](https://www.w3.org/TR
 
 Creation of the DID including the private & public key pair is done **off chain** on a device controlled by the holder.
 Within the metadata of the DID document, a **created** property is added.
-Midnight DID can be automatically created without registration for each Cardano address.
+Midnight DID can be automatically created without registration for each Midnight  address.
 
 ```json
 {
@@ -259,13 +259,13 @@ Within the metadata of the DID document, a **registered** property is added.
 }
 ```
 
-The DID Document will be written to the Cardano Blockchain as part of the transaction meta data.
+The DID Document will be written to the Midnight  Blockchain as part of the transaction meta data.
 
 ## 4.2. Read
 
 1. The DID network identifier is "mainnet".
-2. A lookup in the Cardano Ledger Database will reveal the DID Document by the DID ID.
-3. Midnight provides a backend which provides a method called `didVerify` which will look up the DID Document in a copy of the Cardano Ledger on the connected Cardano node.
+2. A lookup in the Midnight Ledger Database will reveal the DID Document by the DID ID.
+3. Midnight provides a backend which provides a method called `didVerify` which will look up the DID Document in a copy of the Midnight Ledger on the connected Midnight node.
 4. To make sure the result returned by invoking the `didVerify` function is trustworthy, the client could ask a sufficient number of nodes and compare each node's return value.
 
 ## 4.3. Update
@@ -293,7 +293,7 @@ Within the metadata of the DID document, a **deactivation** property is added.
 
 # 5. Security Considerations
 
-The security of the Midnight model is based on the security of the underlying blockchain ledger. Currently, the only supported blockchain is Cardano.
+The security of the Midnight model is based on the security of the underlying blockchain ledger. Currently, the only supported blockchain is Midnight.
 
 The Midnight features mathematically verifiable security against attackers. Security properties for the protocol are comparable to those achieved by the bitcoin blockchain protocol. For more details on the protocol can be found in the white paper:  
 https://midnight.network/#whitepaper
@@ -320,7 +320,7 @@ In the public Midnight network, all transactions are visible by watching the blo
 ## 6.2. Stored data compromise
 
 The DID Document data and history is stored in the blockchain state.
-The Blockchain state is secured by the consensus method. For details see the cardano white paper:  
+The Blockchain state is secured by the consensus method. For details see the Midnight white paper: 
 [https://eprint.iacr.org/2016/889.pdf](https://midnight.network/#whitepaper)
 
 ## 6.4. Identification
@@ -349,7 +349,7 @@ A simple example of a Midnight DID Document is as follows:
 
 ```json
 {
-  "context": [
+ "context": [
     "https://www.w3.org/ns/did/v1",
     "https://w3id.org/security/suites/ed25519-2020/v1"
   ],
